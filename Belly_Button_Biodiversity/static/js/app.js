@@ -18,7 +18,7 @@ function buildMetadata(sample) {
 });
 };
 
-function buildGauge(wfreq) {
+function buildGauge(sample) {
   // var level = data.WFREQ;
   var level = 175 //parseFloat(wfreq) * 20;
   // Trig for meter points
