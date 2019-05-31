@@ -86,7 +86,7 @@ def sample_metadata(sample):
 def sample_wfreq(sample):
     """Return the Weekly Washing Frequency as a number."""
 
-    # `sample[3:]` strips the `BB_` prefix
+    # `sample[3:]`
     results = db.session.query(Samples_Metadata.WFREQ).\
         filter(Samples_Metadata.SAMPLEID == sample[3:]).all()
     wfreq = np.ravel(results)
