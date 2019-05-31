@@ -1,7 +1,7 @@
 function buildMetadata(sample) {
 
   // @TODO: Complete the following function that builds the metadata panel
-  var metadatURL = "/metadata/" + sample;
+  var metadatURL = `/metadata/${sample}`;
   // Use `d3.json` to fetch the metadata for a sample
     // Use d3 to select the panel with id of `#sample-metadata`
   var panelMetadata = d3.select('#sample-metadata');
@@ -82,7 +82,7 @@ function buildMetadata(sample) {
 function buildCharts(sample) {
 
   // @TODO: Use `d3.json` to fetch the sample data for the plots
-  var chartsURL = '/sample/' + sample;
+  var chartsURL = `/samples/${sample}`;
   d3.json(chartsURL).then(function (data){
     // @TODO: Build a Bubble Chart using the sample data
   var trace1 = {
