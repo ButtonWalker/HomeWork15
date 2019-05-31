@@ -7,12 +7,12 @@ function buildMetadata(sample) {
     // Use `.html("") to clear any existing metadata
   panelMetadata.html('');
   // @TODO: Complete the following function that builds the metadata panel
-  d3.json(metaDaturl).then(function(sample){
+  d3.json(metaDataurl).then(function(sample){
     // Use `Object.entries` to add each key and value pair to the panel
     // Hint: Inside the loop, you will need to use d3 to append new
     // tags for each key-value in the metadata.
     Object.entries(sample).forEach(function ([key, value]) {
-      var row = sample_metadata.append("p");
+      var row = panelMetadata.append("p");
       row.text(`${key}: ${value}`);
 });
 });
