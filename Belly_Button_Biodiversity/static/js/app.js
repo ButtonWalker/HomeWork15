@@ -78,8 +78,8 @@ function buildGauge(sample) {
     yaxis: {zeroline:false, showticklabels:false,
               showgrid: false, range: [-1, 1]}
     };
-    var newGauge = document.getElementById('gauge')
-    Plotly.newPlot(newGauge, data, layout);
+    // var newGauge = document.getElementById('gauge')
+    Plotly.newPlot('gauge', data, layout);
   });
 };
 
