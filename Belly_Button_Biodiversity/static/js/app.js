@@ -133,7 +133,7 @@ function buildCharts(sample) {
 
     });
   });   
-}
+};
 function init() {
   // Grab a reference to the dropdown select element
   var selector = d3.select("#selDataset");
@@ -152,18 +152,18 @@ function init() {
     buildCharts(firstSample);
     buildMetadata(firstSample);
   });
-}
+};
 
 function optionChanged(newSample) {
   // Fetch new data each time a new sample is selected
   buildCharts(newSample);
   buildMetadata(newSample);
-}
+};
 
 // Initialize the dashboard
 function init(); {
   getoptions();
-}
+};
 
 function buildGauge(sample) {
   Plotly.d3.json(`/wfreq/${sample}`, function(error, wfreq) {
