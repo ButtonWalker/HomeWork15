@@ -18,9 +18,9 @@ function buildMetadata(sample) {
 });
 };
 
-// function buildGauge(wfreq) {
+function buildGauge(wfreq) {
   // var level = data.WFREQ;
-  var level = parseFloat(wfreq) * 20;
+  var level = 175 //parseFloat(wfreq) * 20;
   // Trig for meter points
   var degrees = 180 - (level*20),
   radius = .7;
@@ -78,7 +78,7 @@ function buildMetadata(sample) {
   };
   var newGauge = document.getElementById('gauge')
   Plotly.newPlot(newGauge, data, layout);
-// };
+};
 
 function buildCharts(sample) {
 
