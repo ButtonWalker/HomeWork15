@@ -76,7 +76,8 @@ function buildGauge(wfreq) {
   yaxis: {zeroline:false, showticklabels:false,
             showgrid: false, range: [-1, 1]}
   };
-  Plotly.newPlot('gauge', data, layout);
+  const newGuage = document.getElementById('guage')
+  Plotly.newPlot(newGuage, data, layout);
 };
 
 function buildCharts(sample) {
