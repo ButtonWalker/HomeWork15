@@ -81,6 +81,18 @@ def sample_metadata(sample):
     print(sample_metadata)
     return jsonify(sample_metadata)
 
+# Returns an integer value for the weekly washing frequency `WFREQ`
+@app.route('/wfreq/<sample>')
+def sample_wfreq(sample):
+    """Return the Weekly Washing Frequency as a number."""
+
+    # `sample[3:]` strips the `BB_` prefix
+    results = session.query(Samples_Metadata.WFREQ).\
+        filter(Samples_Metadata.SAMPLEID == sample[3:]).all()
+    wfreq = np.ravel(results)
+
+    # Return only the first integer value for washing frequency
+    return jsonify(int(wfreq[0]))
 
 @app.route("/samples/<sample>")
 def samples(sample):
