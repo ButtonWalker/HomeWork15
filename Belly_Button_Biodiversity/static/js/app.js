@@ -21,8 +21,8 @@ function buildMetadata(sample) {
 function buildGauge(sample) {
   Plotly.d3.json(`/wfreq/${sample}`, function(error, wfreq) {
     if (error) return console.warn(error);
-    // var level = data.WFREQ;
-    var level = parseFloat(wfreq) * 20;
+    var level = data.WFREQ;
+    // var level = parseFloat(wfreq) * 20;
     // Trig for meter points
     var degrees = 180 - (level*20),
     radius = .7;
