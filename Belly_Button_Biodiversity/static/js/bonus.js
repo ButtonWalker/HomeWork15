@@ -87,6 +87,6 @@ function buildGauge(wfreq) {
     }
   };
 
-  // var getGuage = document.getElementById("gauge");
-  Plotly.newPlot('gauge', data, layout);
+  var getGuage = document.getElementById("gauge");
+  Plotly.newPlot(getGuage, data, layout);
 }
