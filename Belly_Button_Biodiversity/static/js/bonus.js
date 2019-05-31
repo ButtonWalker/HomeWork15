@@ -70,7 +70,7 @@ function buildGauge(wfreq) {
         }
       }
     ],
-    title: "<b>Belly Button Washing Frequency</b>",
+    title: '<b>Belly Button Washing Frequency</b>',
     height: 500,
     width: 500,
     xaxis: {
@@ -87,6 +87,6 @@ function buildGauge(wfreq) {
     }
   };
 
-  var getGuage = document.getElementById("gauge");
-  Plotly.newPlot(getGuage, data, layout);
+  var getGuage = document.getElementById('gauge');
+  Plotly.plot(getGuage, data, layout);
 }
